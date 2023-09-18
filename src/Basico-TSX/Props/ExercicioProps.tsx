@@ -8,11 +8,11 @@ import React from 'react';
 6 - Adicione 1rem de marginBottom na <div>
 */
 type InputProps = React.ComponentProps<'input'> & {label: string};
-const ExercicioProps = ({label, name, type, ...props}: InputProps) => {
+const ExercicioProps = ({label, name, ...props}: InputProps) => {
   return (
     <div style={{marginBottom: '1rem'}}>
       <label htmlFor={name}>{label}</label>
-      <input name={name} type={type} {...props} />
+      <input name={name} type="text" {...props} />
     </div>
   );
 };
